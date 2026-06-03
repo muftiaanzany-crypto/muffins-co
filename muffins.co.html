@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muffins.co - Dessert & Cake Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #fff;
+            width: 250px;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-pesan {
+            background: #FF1493;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-pesan:hover {
+            background: #FF69B4;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #D2691E;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Menu Card */
+        .menu-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(210, 105, 30, 0.3);
+            border-color: #D2691E;
+        }
+
+        .menu-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-content {
+            padding: 20px;
+        }
+
+        .menu-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #FFD700;
+        }
+
+        .menu-description {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .menu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .menu-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF1493;
+        }
+
+        .btn-beli {
+            background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-beli:hover {
+            background: linear-gradient(135deg, #FF8C00 0%, #A0522D 100%);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .search-box {
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🧁</span>
+            <span>Muffins.co</span>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#tentang">Tentang Kami</a>
+            <input type="text" class="search-box" id="searchBox" placeholder="Cari menu...">
+            <button class="btn-pesan" onclick="alert('Keranjang belanja (akan ditambahkan fitur)!')">🛒 Pesan Sekarang</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="section-title">🍰 Menu Kue & Dessert</h1>
+        
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items akan di-generate oleh JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Muffins.co - Toko Dessert & Kue Premium | Hubungi: 0812-3456-7890</p>
+    </footer>
+
+    <script>
+        // Data menu 50 kue dengan nama dan harga bervariasi
+        const menuItems = [
+            { name: "Classic Chocolate Muffin", desc: "Muffin coklat premium dengan chips coklat premium", price: 25000, emoji: "🍫" },
+            { name: "Blueberry Delight", desc: "Muffin blueberry segar dengan rasa manis alami", price: 28000, emoji: "🫐" },
+            { name: "Vanilla Bean Cake", desc: "Kue vanila pilihan dengan biji vanila asli Madagascar", price: 32000, emoji: "🤍" },
+            { name: "Red Velvet Dream", desc: "Kue merah beludru dengan cream cheese frosting", price: 35000, emoji: "❤️" },
+            { name: "Strawberry Shortcake", desc: "Kue berlapis strawberry segar dan whipped cream", price: 30000, emoji: "🍓" },
+            { name: "Carrot Cake Supreme", desc: "Kue wortel dengan krim keju dan rempah pilihan", price: 27000, emoji: "🥕" },
+            { name: "Lemon Zest Muffin", desc: "Muffin lemon segar dengan aroma sitrus yang menyegarkan", price: 26000, emoji: "🍋" },
+            { name: "Coconut Crunch", desc: "Kue kelapa dengan potongan kelapa panggang", price: 29000, emoji: "🥥" },
+            { name: "Matcha Green Tea", desc: "Kue teh hijau premium dari Jepang dengan rasa umami", price: 34000, emoji: "🟢" },
+            { name: "Tiramisu Cake", desc: "Kue Italia dengan mascarone dan espresso", price: 38000, emoji: "☕" },
+            { name: "Chocolate Lava", desc: "Kue coklat dengan isi cairan coklat yang lumer", price: 36000, emoji: "🌋" },
+            { name: "Pistachio Dream", desc: "Kue pistachio dengan frosting pistachio premium", price: 40000, emoji: "🟫" },
+            { name: "Raspberry Cheesecake", desc: "Kue keju dengan topping raspberry segar", price: 37000, emoji: "🫐" },
+            { name: "Mango Paradise", desc: "Kue mangga dengan rasa tropis yang segar", price: 31000, emoji: "🥭" },
+            { name: "Pandan Cake", desc: "Kue pandan tradisional Indonesia dengan rasa kental", price: 25000, emoji: "🌿" },
+            { name: "Honey Oat Muffin", desc: "Muffin madu dengan oat premium dan sedikit kismis", price: 24000, emoji: "🍯" },
+            { name: "Almond Butter Cup", desc: "Kue dengan isian selai almond dan coklat gelap", price: 33000, emoji: "🫘" },
+            { name: "Caramel Swirl", desc: "Kue dengan topping karamel yang lumer dan gurih", price: 32000, emoji: "🤎" },
+            { name: "Black Forest", desc: "Kue Jerman klasik dengan ceri dan coklat gelap", price: 39000, emoji: "🍒" },
+            { name: "Strawberry Fields", desc: "Muffin strawberry dengan selai strawberry homemade", price: 27000, emoji: "🌸" },
+            { name: "Salted Caramel Tart", desc: "Tart dengan isian karamel asin yang gurih mansis", price: 34000, emoji: "🧂" },
+            { name: "Banana Nut Bread", desc: "Roti pisang dengan kacang walnut yang renyah", price: 26000, emoji: "🍌" },
+            { name: "Cookies and Cream", desc: "Kue dengan potongan cookies dan whipped cream", price: 31000, emoji: "🍪" },
+            { name: "Purple Ube", desc: "Kue ube Filipina dengan warna ungu yang cantik", price: 33000, emoji: "💜" },
+            { name: "Espresso Brownie", desc: "Brownies coklat dengan kopi espresso premium", price: 29000, emoji: "☕" },
+            { name: "Cheesecake Classic", desc: "Cheesecake New York dengan dasar graham sempurna", price: 36000, emoji: "🧀" },
+            { name: "Peach Cobbler", desc: "Kue peach dengan topping krumble yang renyah", price: 30000, emoji: "🍑" },
+            { name: "Choco Hazelnut", desc: "Kue coklat hazelnut dengan tekstur mousse lembut", price: 35000, emoji: "🍫" },
+            { name: "Lavender Honey", desc: "Kue bunga lavender dengan madu premium", price: 32000, emoji: "💜" },
+            { name: "Banana Split Cake", desc: "Kue pisang dengan coklat dan kacang tanah", price: 28000, emoji: "🍌" },
+            { name: "Green Pistachio", desc: "Kue pistachio dengan frosting mentega pistachio", price: 37000, emoji: "🟢" },
+            { name: "Brownies Fudge", desc: "Brownies dengan fudge coklat yang melimpah", price: 25000, emoji: "🟤" },
+            { name: "Strawberry Jam Tart", desc: "Tart dengan jam strawberry segar buatan sendiri", price: 28000, emoji: "🍓" },
+            { name: "Chocolate Mousse", desc: "Mousse coklat ringan dengan dekorasi coklat", price: 29000, emoji: "🍫" },
+            { name: "Vanilla Custard", desc: "Kue vanila dengan custard dan topping karamel", price: 31000, emoji: "🤍" },
+            { name: "Cinnamon Roll Cake", desc: "Kue dengan rasa kayumanis dan icing gula", price: 27000, emoji: "🌀" },
+            { name: "Orange Blossom", desc: "Kue jeruk dengan air bunga jeruk yang harum", price: 33000, emoji: "🍊" },
+            { name: "Maple Pecan", desc: "Kue maple dengan pecan yang gurih manis", price: 34000, emoji: "🍁" },
+            { name: "Earl Grey Tea Cake", desc: "Kue dengan aroma Earl Grey yang elegan", price: 32000, emoji: "🫖" },
+            { name: "Lemon Poppy Seed", desc: "Muffin lemon dengan biji poppy yang unik", price: 26000, emoji: "🍋" },
+            { name: "Raspberry White Choco", desc: "Kue raspberry dengan coklat putih yang lembut", price: 35000, emoji: "🫐" },
+            { name: "Ginger Spice", desc: "Kue jahe dengan rempah kue tradisional", price: 25000, emoji: "🫑" },
+            { name: "Chocolate Ganache", desc: "Kue dengan ganache coklat berlapis yang mewah", price: 38000, emoji: "🍫" },
+            { name: "Pumpkin Spice", desc: "Kue labu dengan rempah pumpkin spice musiman", price: 28000, emoji: "🎃" },
+            { name: "Blissful Berry Mix", desc: "Kue dengan campuran berry segar dan yogurt", price: 30000, emoji: "🫐" },
+            { name: "Vanilla Caramel", desc: "Kue vanila dengan topping caramel yang lumer", price: 31000, emoji: "🤎" },
+            { name: "Chocolate Chip Classic", desc: "Kue coklat chip klasik dengan resep rahasia", price: 26000, emoji: "🍪" },
+            { name: "Strawberry Cream", desc: "Kue strawberry dengan krim keju premium", price: 32000, emoji: "🍓" },
+            { name: "Nutella Dream", desc: "Kue dengan Nutella dan hazelnut yang berlimpah", price: 36000, emoji: "🫘" },
+            { name: "Pink Velvet", desc: "Kue pink beludru dengan frosting cream cheese", price: 33000, emoji: "💗" }
+        ];
+
+        // Fungsi untuk render menu
+        function renderMenu(items) {
+            const menuGrid = document.getElementById('menuGrid');
+            menuGrid.innerHTML = '';
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'menu-card';
+                card.innerHTML = `
+                    <div class="menu-image">${item.emoji}</div>
+                    <div class="menu-content">
+                        <div class="menu-name">${item.name}</div>
+                        <div class="menu-description">${item.desc}</div>
+                        <div class="menu-footer">
+                            <div class="menu-price">Rp ${item.price.toLocaleString('id-ID')}</div>
+                            <button class="btn-beli" onclick="addToCart('${item.name}', ${item.price})">Beli</button>
+                        </div>
+                    </div>
+                `;
+                menuGrid.appendChild(card);
+            });
+        }
+
+        // Fungsi search
+        document.getElementById('searchBox').addEventListener('keyup', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = menuItems.filter(item =>
+                item.name.toLowerCase().includes(searchTerm) ||
+                item.desc.toLowerCase().includes(searchTerm)
+            );
+            renderMenu(filtered);
+        });
+
+        // Fungsi add to cart
+        function addToCart(name, price) {
+            alert(`✅ ${name}\nRp ${price.toLocaleString('id-ID')} ditambahkan ke keranjang!`);
+        }
+
+        // Render menu saat pertama kali load
+        renderMenu(menuItems);
+    </script>
+</body>
+</html>
